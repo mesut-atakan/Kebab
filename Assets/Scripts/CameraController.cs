@@ -13,6 +13,9 @@ namespace Player {
         [SerializeField] private bool isAxis = true;
 
 
+        [Range(0,15)] public float cameraXDistance = 5.0f;
+
+
 
         [HideInInspector]
         public bool axisChange = false;
@@ -21,7 +24,7 @@ namespace Player {
 
         public  void CameraMove()
         {
-            camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(this.targetTransform.position.x, 0.0f, camera.transform.position.z), this.moveSmothness * Time.deltaTime);
+            camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(this.targetTransform.position.x + this.cameraXDistance, 0.0f, camera.transform.position.z), this.moveSmothness * Time.deltaTime);
         }
 
 

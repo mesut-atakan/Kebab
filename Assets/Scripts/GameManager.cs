@@ -19,6 +19,7 @@ internal class GameManager : MonoBehaviour
 
 
     private void Awake() {
+        
         if (this.playerController == null)
             this.playerController = FindObjectOfType<PlayerController>();
         if (this.playerController.rb == null)
@@ -33,12 +34,18 @@ internal class GameManager : MonoBehaviour
         this.playerController.rb.freezeRotation = true;
     }
 
+    private void OnEnable() {
+    }
+
+    private void OnDisable() {
+    }
+
 
 
     private void FixedUpdate() {
         this.playerController.CharacterController();
         LevelManager.TimeSpeed();
-        Debug.Log($"Time Speed: {Time.timeScale}");
+        // Debug.Log($"Time Speed: {Time.timeScale}");
     }
 
 

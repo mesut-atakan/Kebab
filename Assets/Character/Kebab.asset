@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbdb91453a9a3a459ab308456adf470, type: 3}
   m_Name: Kebab
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 0
-  character: {fileID: 0}
+  characterType: 1
+  speed: 2.7
+  jumpForce: 10
+  characterSprite: {fileID: 7482667652216324306, guid: 9ae5afa21ee803e4683cb3542f4003e4, type: 3}
   upWorld: 0
