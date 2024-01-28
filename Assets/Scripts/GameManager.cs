@@ -1,5 +1,7 @@
+using System.Collections;
 using Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -13,6 +15,8 @@ internal class GameManager : MonoBehaviour
     [Header("Classes")]
     public PlayerController playerController;
     public CameraController cameraController;
+    public UIManager uiManager;
+    public AudioManager audioManager;
 
 
 
@@ -28,13 +32,16 @@ internal class GameManager : MonoBehaviour
             this.cameraController = FindObjectOfType<CameraController>();
         if (CameraController.camera == null)
             CameraController.camera = Camera.main;
-        
+
+        if (uiManager == null)
+            this.uiManager = FindObjectOfType<UIManager>();
         
         
         this.playerController.rb.freezeRotation = true;
     }
 
     private void OnEnable() {
+        this.audioManager.ChangeMussic();
     }
 
     private void OnDisable() {
@@ -78,8 +85,11 @@ internal class GameManager : MonoBehaviour
 
 
 
-    public void Losser()
+    public IEnumerator Losser()
     {
         Debug.Log("<color=red>LOSSER</color>", this.gameObject);
+        this.uiManager.deadScreen.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        LevelManager.ChangeScene(LevelManager.CurrentLevelIndex);
     }
 }

@@ -110,6 +110,7 @@ namespace Player
                 // this.characterManager.ChangeSprite = this.characterManager.characterProperties.characterSprite;
 
                 this.characterManager.HealthBar();
+                this.gameManager.audioManager.ChangeMussic();
                 
             }
         }

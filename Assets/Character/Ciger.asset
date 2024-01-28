@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbdb91453a9a3a459ab308456adf470, type: 3}
   m_Name: Ciger
   m_EditorClassIdentifier: 
-  speed: 4.4
-  jumpForce: 6.3
+  characterType: 0
+  speed: 5.2
+  jumpForce: 4.1
   characterSprite: {fileID: -327396707, guid: 845dfb4dd3b1aa945aea9f581724ead5, type: 3}
   upWorld: 1
-  healthObject: {fileID: 1959017087001542722, guid: 927f653b1e8820b498322d1c0790d5e6, type: 3}

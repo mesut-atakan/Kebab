@@ -115,7 +115,8 @@ namespace Player
                 this.characterHealth--;
             else {
                 this.characterHealth = 0;
-                LevelManager.ChangeScene(LevelManager.CurrentLevelName);
+                StartCoroutine(this.gameManager.Losser());
+                // LevelManager.ChangeScene(LevelManager.CurrentLevelName);
             }
             Debug.Log($"Health: {this.characterHealth}", this.gameObject);
             return characterHealth;

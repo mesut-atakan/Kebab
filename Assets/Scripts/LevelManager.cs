@@ -42,4 +42,10 @@ internal class LevelManager : MonoBehaviour
     {
         Time.timeScale += timeSpeed * Time.deltaTime;
     }
+
+
+    public static void Exit()
+    {
+        Application.Quit();
+    }
 }
