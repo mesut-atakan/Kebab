@@ -74,6 +74,10 @@ namespace Player
 
                 TakeDamage();
             }
+            else if (other.CompareTag("Finish"))
+            {
+                LevelManager.ChangeScene(LevelManager.CurrentLevelIndex);
+            }
         }
 
 
