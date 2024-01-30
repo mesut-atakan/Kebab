@@ -8,6 +8,7 @@ internal class Cat : MonoBehaviour
     public Transform targetTrasnform;
     public float targetDistance;
     public float targetSmothness;
+    public bool isTarget;
 
     public float _minDistance, _maxDistance;
 
@@ -38,7 +39,8 @@ internal class Cat : MonoBehaviour
 
 
     private void Update() {
-        TargetPlayer();
+        if (this.isTarget)
+            TargetPlayer();
     }
 
     
