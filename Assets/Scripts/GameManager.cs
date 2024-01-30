@@ -88,6 +88,7 @@ internal class GameManager : MonoBehaviour
     public IEnumerator Losser()
     {
         Debug.Log("<color=red>LOSSER</color>", this.gameObject);
+        Time.timeScale = 0;
         this.uiManager.deadScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         LevelManager.ChangeScene(LevelManager.CurrentLevelIndex);
