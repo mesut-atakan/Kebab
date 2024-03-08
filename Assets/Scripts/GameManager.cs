@@ -60,10 +60,12 @@ internal class GameManager : MonoBehaviour
 
 
     private void Update() {
-        this.playerController.CharacterJump();
-        this.playerController.Switch();
+        if (this.playerController.isMove)
+        {
+            this.playerController.CharacterJump();
+            this.playerController.Switch();
 
-
+        }
         this.cameraController.CameraChange(this.playerController.characterManager.characterProperties.upWorld);
 
     }
@@ -88,7 +90,7 @@ internal class GameManager : MonoBehaviour
     public IEnumerator Losser()
     {
         Debug.Log("<color=red>LOSSER</color>", this.gameObject);
-        Time.timeScale = 0;
+        this.playerController.isMove = true;
         this.uiManager.deadScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         LevelManager.ChangeScene(LevelManager.CurrentLevelIndex);

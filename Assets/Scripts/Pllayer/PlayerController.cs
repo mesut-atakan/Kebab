@@ -11,6 +11,12 @@ namespace Player
         public KeyCode jumpKey = KeyCode.Space;
         public KeyCode switchKey = KeyCode.R;
 
+
+
+        [Space(10f)]
+
+        public bool isMove = true;
+
         [Header("Ground Check")]
 
         public Transform groundCheckTransform;

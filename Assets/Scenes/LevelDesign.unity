@@ -29300,7 +29300,7 @@ MonoBehaviour:
   targetTrasnform: {fileID: 1973225479}
   targetDistance: 4.8
   targetSmothness: 1.16
-  isTarget: 0
+  isTarget: 1
   _minDistance: 0
   _maxDistance: 0
 --- !u!61 &1742035024
@@ -31168,6 +31168,7 @@ MonoBehaviour:
   horizontalAxisName: Horizontal
   jumpKey: 32
   switchKey: 114
+  isMove: 1
   groundCheckTransform: {fileID: 945692164}
   groundCheckSize: {x: 1.35, y: 0.1}
   groundLayer:
